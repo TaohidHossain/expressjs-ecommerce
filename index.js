@@ -24,19 +24,6 @@ connectDB()
         app.listen(serverConfig.PORT, () => console.log(`App is listening at port ${serverConfig.PORT}`))
     })
 
-
-// connect DB with mongoose
-/*mongoose.connect('mongodb+srv://htaohid31:P70iXqZKayDIKHoJ@cluster0.d8bxfvc.mongodb.net/ecommerce-site?retryWrites=true&w=majority&appName=Cluster0')
-    .then(conn => {
-        console.log("Database connected successfully")
-        app.listen(process.env.PORT, ()=> {
-            console.log(`App is listening at port ${process.env.PORT}`)
-        })
-    })
-    .catch(error => {
-        console.log(error)
-    })
-*/ 
 app.use(globalErrorHandler)
 app.use('*', (req, res) => {
     res.status(404).json({

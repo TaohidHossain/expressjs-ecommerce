@@ -7,7 +7,6 @@ const password = process.env.DB_PASSWORD
 const cluster = process.env.DB_CLUSTER
 const collection = process.env.DB_COLLECTION_NAME
 
-// mongoose.connect('mongodb+srv://htaohid31:P70iXqZKayDIKHoJ@cluster0.d8bxfvc.mongodb.net/ecommerce-site?retryWrites=true&w=majority&appName=Cluster0')
 const DB_URL = host + '://' + username  + ':' + password + '@' + cluster + '/' + collection + '?retryWrites=true&w=majority&appName=Cluster0'
 
 async function connectDB(){
